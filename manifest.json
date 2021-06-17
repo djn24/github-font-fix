@@ -1,17 +1,22 @@
 {
-    "name": "GitHub font fix",
+    "name": "GitHub Monospace Font Fix",
     "version": "0.1",
-    "description": "Fix GitHub monospace font.",
-    "browser_action": {
-        "default_icon": "icon.png"
+    "description": "Replace the GitHub monospace font with one that draws extended ASCII diagrams correctly.",
+    "icons": {
+        "32": "GitHub-Mark-32px.png",
+        "64": "GitHub-Mark-64px.png",
+        "120": "GitHub-Mark-120px-plus.png"
     },
-    "Permissions": [
-        "https://github.com"
-    ],
+    "manifest_version": 3,
     "content_scripts": [
         {
-            "matches": ["https://github.com/*", "https://gist.github.com/*"],
-            "css": ["fixfont.css"]
+            "matches": [
+                "https://github.com/*",
+                "https://gist.github.com/*"
+            ],
+            "css": [
+                "fixfont.css"
+            ]
         }
     ]
 }

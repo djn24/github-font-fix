@@ -1,29 +1,11 @@
-Me, and I guess most other programmers have their own favourite monospace
-font.  And they most probably have set up their browsers to use that font as
-the "monospace" generic font family.
+# github-font-fix
 
-But GitHub, a site for programmers, of all places, just plain ignores this
-preference.  What's worse, they use "Courier New" (sometimes just "Courier")
-as a way to make my eyes hurt every time I want to read code on the site.
+Chrome extension to replace the monospace font used by GitHub with one which renders extended ASCII diagrams correctly.
 
-I have nothing against "Courier New", except for the following:
+Many thanks to the original author, from whose repo this is forked. I've just tweaked it to work with current Chrome. Amazingly
+the stylesheet seems pretty much OK as it is despite being ten years old.
 
- - It is not very well suited for code listings (due to some well known almost
-   indistinguishable glyphs), and
+**IMPORTANT: The extension by itself doesn't actually solve the problem of extended ASCII diagram rendering, at least on macOS:**
 
- - The font rendering is quite thin on my operating system, which, combined
-   with light colors no not-really-white background makes my eyes hurt when
-   trying to read the code.
-
-According to [1] GitHub has decided not to do the right thing and make the
-programmers all around the world suffer.
-
-This extension only provides a stylesheet that overrides all selectors that
-mention "Courier" by setting "font-family" to "monospace".  I did this with a
-quick Emacs keyboard macro so it may well not be perfect, and will probably
-get out of date at some near point in future.  But I totally refuse to invest
-any more time on coming up with a more reliable and "proper" solution when the
-right thing(TM) is for GitHub to do their homework.
-
-Footnotes: 
-[1]  http://support.github.com/discussions/site/937-please-dont-use-specific-monospace-fonts
+The extension changes the monospace font to "monospace", i.e. use the browser default. I then changed the monospace default in
+chrome://settings/fonts to Menlo.
